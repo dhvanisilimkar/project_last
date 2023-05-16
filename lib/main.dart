@@ -101,55 +101,68 @@ class _MyappState extends State<Myapp> {
                           ),
                         ],
                       ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Align(
-                            alignment: Alignment(-0.8, 0),
-                            child: Container(
-                              alignment: Alignment.center,
-                              height: 200,
-                              width: 150,
-                              child: Image.network(
-                                "https://in.pinterest.com/pin/213217363596485056/",
-                              ),
-                              // decoration: BoxDecoration(
-                              //   borderRadius: BorderRadius.circular(10),
-                              //   color: Colors.blue,
-                              // ),
-                              // Text(
-                              // "hello",
-                              // style: TextStyle(color: Colors.black),
-                              // ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Align(
-                            alignment: Alignment(-0.8, 0),
-                            child: Container(
-                              alignment: Alignment.center,
-                              height: 200,
-                              width: 150,
-                              child: Text(
-                                "hello",
-                                style: TextStyle(color: Colors.black),
-                              ),
+                      Stack(
+                       children: [
+                         Container(
+                           height: 120,
+                           width: 100,
+                           child: Image.network("https://in.pinterest.com/pin/213217363596485056/"),
                               decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Colors.blue,
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(20)
                               ),
-                            ),
-                          ),
-                        ],
-                      )
+                         ),
+
+                      //   Column(
+                      //   mainAxisAlignment: MainAxisAlignment.center,
+                      //   children: [
+                      //     Align(
+                      //       alignment: Alignment(-0.8, 0),
+                      //       child: Container(
+                      //         alignment: Alignment.center,
+                      //         height: 200,
+                      //         width: 150,
+                      //         child: Image.network(
+                      //           "https://in.pinterest.com/pin/213217363596485056/",
+                      //         ),
+                      //         decoration: BoxDecoration(
+                      //           borderRadius: BorderRadius.circular(10),
+                      //           color: Colors.blue,
+                      //         ),
+                      //
+                      //       ),
+                      //     ),
+                      //     SizedBox(
+                      //       height: 20,
+                      //     ),
+                      //     Align(
+                      //       alignment: Alignment(-0.8, 0),
+                      //       child: Container(
+                      //         alignment: Alignment.center,
+                      //         height: 200,
+                      //         width: 150,
+                      //         child: Text(
+                      //           "hello",
+                      //           style: TextStyle(color: Colors.black),
+                      //         ),
+                      //         decoration: BoxDecoration(
+                      //           borderRadius: BorderRadius.circular(10),
+                      //           color: Colors.blue,
+                      //         ),
+                      //       ),
+                      //     ),
+                      //   ],
+                      // )
+                         ]
+                      ),
                     ],
                   ),
                 ),
+
                 backgroundColor: Color(0xffebeaef),
               );
-            })
+            }
+            ),
       },
     );
   }
