@@ -4,18 +4,18 @@ import 'package:project_last/utils/routes_util.dart';
 import '../modal/pro_modal.dart';
 import '../modal/pro_util.dart';
 
-class cart_page extends StatefulWidget {
-  const cart_page({Key? key}) : super(key: key);
+class CartPage extends StatefulWidget {
+  const CartPage({Key? key}) : super(key: key);
 
   @override
-  State<cart_page> createState() => _cart_pageState();
+  State<CartPage> createState() => _cart_pageState();
 }
 
-class _cart_pageState extends State<cart_page> {
+class _cart_pageState extends State<CartPage> {
   @override
   Widget build(BuildContext context) {
     Size s = MediaQuery.of(context).size;
-    int ind = ModalRoute.of(context)!.settings.arguments as int;
+    int? ind = ModalRoute.of(context)!.settings.arguments as int?;
 
     return Scaffold(
       appBar: AppBar(
@@ -47,7 +47,7 @@ class _cart_pageState extends State<cart_page> {
         ],
         centerTitle: true,
         elevation: 0,
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.blue,
       ),
       body: Padding(
         padding: EdgeInsets.all(15),
@@ -97,11 +97,11 @@ class _cart_pageState extends State<cart_page> {
                 ),
                 FloatingActionButton(
                   onPressed: () {
-                    // setState(() {
-                    //   // if (Products.cartPro > 1) {
-                    //   //   Products.cartPro--;
-                    //   }
-                    // // });
+                    setState(() {
+                      if (cart.length >= 1) {
+                        // cart.add(value);
+                      }
+                    });
                   },
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),

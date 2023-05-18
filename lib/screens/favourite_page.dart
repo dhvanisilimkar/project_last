@@ -3,14 +3,14 @@ import 'package:project_last/utils/routes_util.dart';
 
 import '../modal/pro_util.dart';
 
-class favourite_page extends StatefulWidget {
-  const favourite_page({Key? key}) : super(key: key);
+class FavouritePage extends StatefulWidget {
+  const FavouritePage({Key? key}) : super(key: key);
 
   @override
-  State<favourite_page> createState() => _favourite_pageState();
+  State<FavouritePage> createState() => _favourite_pageState();
 }
 
-class _favourite_pageState extends State<favourite_page> {
+class _favourite_pageState extends State<FavouritePage> {
   @override
   Widget build(BuildContext context) {
     Size s = MediaQuery.of(context).size;
@@ -41,7 +41,7 @@ class _favourite_pageState extends State<favourite_page> {
             ),
           ),
         ],
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.blue,
         centerTitle: true,
         elevation: 0,
       ),

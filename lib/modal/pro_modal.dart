@@ -4,7 +4,7 @@ class Product {
   final String description;
   final String thumbnail;
   final int price;
-  final String like;
+  bool like = false;
 
   Product({
     required this.id,
@@ -12,7 +12,6 @@ class Product {
     required this.description,
     required this.thumbnail,
     required this.price,
-    required this.like,
   });
   factory Product.fromeMap({required Map data}) {
     return Product(
@@ -21,7 +20,6 @@ class Product {
       description: data['description'],
       thumbnail: data['thumbnail'],
       price: data['price'],
-      like: data['like'],
     );
   }
 }
@@ -31,5 +29,19 @@ class Cart {
 
   Cart({
     required this.cartPro,
+  });
+}
+
+class Contacts {
+  String firstName;
+  String lastName;
+  String contact;
+  String email;
+
+  Contacts({
+    required this.firstName,
+    required this.lastName,
+    required this.contact,
+    required this.email,
   });
 }

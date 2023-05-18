@@ -1925,6 +1925,8 @@ List<Map> allProductsData = [
     ]
   }
 ];
+List<Contacts> allContacts = [];
+
 List<Product> allProducts =
     allProductsData.map((e) => Product.fromeMap(data: e)).toList();
 List<Product> favourite = [];

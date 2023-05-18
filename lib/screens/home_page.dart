@@ -32,7 +32,7 @@ class _home_pageState extends State<home_page> {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.of(context).pushNamed(MyRoutes.favourite_page);
+              Navigator.of(context).pushNamed('favourite_page');
             },
             icon: Icon(
               Icons.favorite,
@@ -41,7 +41,7 @@ class _home_pageState extends State<home_page> {
           ),
           IconButton(
             onPressed: () {
-              Navigator.of(context).pushNamed(MyRoutes.cart_page);
+              Navigator.of(context).pushNamed('cart_page');
             },
             icon: Icon(
               Icons.shopping_cart_outlined,
@@ -88,7 +88,7 @@ class _home_pageState extends State<home_page> {
                         child: GestureDetector(
                           onTap: () {
                             Navigator.of(context).pushNamed(
-                              MyRoutes.favourite_page,
+                              'customer_intro_page',
                               arguments: index,
                             );
                           },
@@ -109,7 +109,7 @@ class _home_pageState extends State<home_page> {
                                   allProducts[index].like =
                                       !allProducts[index].like;
 
-                                  if (allProducts[index]) {
+                                  if (allProducts[index].like) {
                                     favourite.add(allProducts[index]);
                                   } else {
                                     favourite.removeAt(index);
