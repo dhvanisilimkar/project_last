@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../modal/pro_modal.dart';
+import 'pro_modal.dart';
 
 List<Map> allProductsData = [
   {
@@ -1927,3 +1927,6 @@ List<Map> allProductsData = [
 ];
 List<Product> allProducts =
     allProductsData.map((e) => Product.fromeMap(data: e)).toList();
+List<Product> favourite = [];
+List<Product> cart = [];
+List<Cart> cartValue = [];
