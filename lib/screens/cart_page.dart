@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:project_last/utils/routes_util.dart';
 
 import '../modal/pro_modal.dart';
-import '../modal/pro_util.dart';
+import '../modal/pro_detail_modal.dart';
 
 class CartPage extends StatefulWidget {
   const CartPage({Key? key}) : super(key: key);

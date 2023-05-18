@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_last/utils/routes_util.dart';
 
-import '../modal/pro_util.dart';
+import '../modal/pro_detail_modal.dart';
 
 class FavouritePage extends StatefulWidget {
   const FavouritePage({Key? key}) : super(key: key);

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_last/modal/pro_util.dart';
+import 'package:project_last/modal/pro_detail_modal.dart';
 import 'package:project_last/utils/routes_util.dart';
 
 class product_page extends StatefulWidget {

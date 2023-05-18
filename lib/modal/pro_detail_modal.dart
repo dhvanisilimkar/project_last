@@ -1925,6 +1925,28 @@ List<Map> allProductsData = [
     ]
   }
 ];
+List categories = [
+  "smartphones",
+  "laptops",
+  "fragrances",
+  "skincare",
+  "groceries",
+  "furniture",
+  "tops",
+  "womens-dresses",
+  "womens-shoes",
+  "mens-shirts",
+  "mens-shoes",
+  "mens-watches",
+  "womens-watches",
+  "womens-bags",
+  "womens-jewellery",
+  "sunglasses",
+  "automotive",
+  "motorcycle",
+  "lighting",
+];
+
 List<Contacts> allContacts = [];
 
 List<Product> allProducts =
@@ -1932,3 +1954,11 @@ List<Product> allProducts =
 List<Product> favourite = [];
 List<Product> cart = [];
 List<Cart> cartValue = [];
+
+class Globals {
+  static String? firstName;
+  static String? lastName;
+  static String? contact;
+  static String? email;
+  static int cartPro = 1;
+}

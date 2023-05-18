@@ -4,6 +4,7 @@ class Product {
   final String description;
   final String thumbnail;
   final int price;
+  final String category;
   bool like = false;
 
   Product({
@@ -12,6 +13,7 @@ class Product {
     required this.description,
     required this.thumbnail,
     required this.price,
+    required this.category,
   });
   factory Product.fromeMap({required Map data}) {
     return Product(
@@ -20,6 +22,7 @@ class Product {
       description: data['description'],
       thumbnail: data['thumbnail'],
       price: data['price'],
+      category: data['category'],
     );
   }
 }
