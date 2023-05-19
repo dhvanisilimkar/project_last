@@ -30,7 +30,7 @@ class _InvoicePreviewPageState extends State<InvoicePreviewPage> {
                 style: pw.TextStyle(
                   fontSize: 20,
                   fontWeight: pw.FontWeight.bold,
-                  color: PdfColors.black,
+                  color: PdfColors.blue,
                 ),
               ),
               pw.Text(

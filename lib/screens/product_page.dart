@@ -15,6 +15,7 @@ class _product_pageState extends State<product_page> {
   @override
   Widget build(BuildContext context) {
     Size s = MediaQuery.of(context).size;
+
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -29,7 +30,7 @@ class _product_pageState extends State<product_page> {
         title: Text(
           "Product Details",
           style: TextStyle(
-            fontSize: 34,
+            fontSize: 26,
             fontWeight: FontWeight.bold,
             color: Colors.white,
           ),
@@ -62,9 +63,9 @@ class _product_pageState extends State<product_page> {
               )),
             ),
             Container(
-              height: s.height,
+              height: s.height * 0.4,
               width: s.width,
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(18),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.vertical(
@@ -72,74 +73,80 @@ class _product_pageState extends State<product_page> {
                 ),
               ),
               alignment: Alignment.center,
-              child: Column(
-                children: [
-                  SizedBox(
-                    height: s.height * 0.03,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "${allProducts[index].title}",
-                        style: TextStyle(
-                          fontSize: 26,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "${allProducts[index].title}",
-                        style: TextStyle(
-                          fontSize: 26,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
-                      )
-                    ],
-                  ),
-                  SizedBox(
-                    height: s.height * 0.03,
-                  ),
-                  Text(
-                    "${allProducts[index].description}",
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      height: s.height * 0.03,
                     ),
-                  ),
-                  SizedBox(
-                    height: s.height * 0.03,
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.of(context).pushNamed(MyRoutes.cart_page);
-                    },
-                    child: Container(
-                      height: s.height,
-                      width: s.width,
-                      alignment: Alignment.center,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Add to Cart",
-                            style: TextStyle(
-                              fontWeight: FontWeight.w500,
-                              fontSize: 20,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "${allProducts[index].title}",
+                          style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                          ),
+                        ),
+                        Text(
+                          "${allProducts[index].price}",
+                          style: TextStyle(
+                            fontSize: 26,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: s.height * 0.03,
+                    ),
+                    Text(
+                      "${allProducts[index].description}",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                    ),
+                    SizedBox(
+                      height: s.height * 0.03,
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        cart.add(allProducts[index]);
+                      },
+                      child: Container(
+                        height: s.height,
+                        width: s.width,
+                        alignment: Alignment.center,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Add to Cart",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 20,
+                                color: Colors.white,
+                              ),
+                            ),
+                            SizedBox(
+                              width: s.width * 0.37,
+                            ),
+                            Icon(
+                              Icons.shopping_cart_outlined,
                               color: Colors.white,
                             ),
-                          ),
-                          Icon(
-                            Icons.shopping_cart_outlined,
-                            color: Colors.white,
-                          )
-                        ],
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ],

@@ -20,10 +20,12 @@ class Myapp extends StatefulWidget {
 }
 
 class _MyappState extends State<Myapp> {
+  bool black = false;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+
       routes: {
         MyRoutes.home_page: (context) => home_page(),
         MyRoutes.favourite_page: (context) => const FavouritePage(),
