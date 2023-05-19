@@ -33,6 +33,14 @@ class _home_pageState extends State<home_page> {
         backgroundColor: Colors.blue,
         centerTitle: true,
         elevation: 0,
+        actions: [
+          IconButton(onPressed: (){
+            Navigator.of(context).pushNamed('customer_intro_page');
+          },
+        icon:Icon(Icons.people_rounded
+        ),
+          ),
+        ],
       ),
       body: Padding(
         padding: EdgeInsets.all(18),

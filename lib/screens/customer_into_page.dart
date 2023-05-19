@@ -168,7 +168,7 @@ class _customer_into_pageState extends State<CustomerIntroPage> {
                         width: 1,
                       ),
                     ),
-                    hintText: "samir@gmail.com",
+                    hintText: "dhvani@gmail.com",
                     hintStyle: TextStyle(
                       color: Colors.grey.shade400,
                     ),
@@ -194,7 +194,7 @@ class _customer_into_pageState extends State<CustomerIntroPage> {
                         width: 1,
                       ),
                     ),
-                    hintText: "+91 8160840581",
+                    hintText: "+91 6352036854",
                     hintStyle: TextStyle(
                       color: Colors.grey.shade400,
                     ),
